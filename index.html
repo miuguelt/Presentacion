@@ -560,9 +560,21 @@
                 <span class="nav-icon">🏁</span>
                 <span class="nav-title">Fase 3<br>Evaluación</span>
             </div>
+            <div class="nav-card" onclick="showSection('portafolio', this)">
+                <span class="nav-icon">📁</span>
+                <span class="nav-title">Portafolio<br>Evidencias</span>
+            </div>
+            <div class="nav-card" onclick="showSection('productiva', this)">
+                <span class="nav-icon">🏭</span>
+                <span class="nav-title">Etapa<br>Productiva</span>
+            </div>
             <div class="nav-card" onclick="showSection('checklist', this)">
                 <span class="nav-icon">✅</span>
                 <span class="nav-title">Checklist<br>Interactivo</span>
+            </div>
+            <div class="nav-card" onclick="showSection('referencias', this)">
+                <span class="nav-icon">📚</span>
+                <span class="nav-title">Referencias<br>y Formatos</span>
             </div>
         </nav>
 
@@ -579,7 +591,7 @@
                 <div class="tip-content">
                     <strong>¿Por qué es importante?</strong>
                     No seguir esta guía puede resultar en "No Conformidades" durante auditorías de calidad. Más
-                    importante aún, desorganiza el proceso de aprendizaje de tus alumnos.
+                    importante aún, desorganiza el proceso de aprendizaje de tus aprendices.
                 </div>
             </div>
 
@@ -591,12 +603,95 @@
                         Formación Profesional Integral.</p>
                 </div>
                 <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 30px; border-radius: 12px;">
-                    <h4 style="color: var(--sena-dark-green); margin-top:0; font-size: 1.3rem;">👥 Responsabilidad</h4>
+                    <h4 style="color: var(--sena-dark-green); margin-top:0; font-size: 1.3rem;">👥 Responsables</h4>
                     <ul style="padding-left: 20px;">
-                        <li>Planear actividades pedagógicas.</li>
-                        <li>Ejecutar formación centrada en el aprendiz.</li>
-                        <li>Evaluar basándose en resultados.</li>
+                        <li><strong>Instructor:</strong> Ejecutor principal del proceso formativo.</li>
+                        <li><strong>Coordinador Académico:</strong> Seguimiento y apoyo pedagógico.</li>
+                        <li><strong>Subdirector de Centro:</strong> Garantizar condiciones para la formación.</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- ALCANCE -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.4rem; border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    📋 Alcance de la Guía
+                </h4>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid var(--sena-orange);">
+                        <strong>Inicia:</strong>
+                        <p style="margin: 10px 0 0;">Con la verificación de instructores, materiales y ambientes de
+                            aprendizaje.</p>
+                    </div>
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid var(--sena-green);">
+                        <strong>Finaliza:</strong>
+                        <p style="margin: 10px 0 0;">Con la retroalimentación del programa de formación y gestión del
+                            egresado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GENERALIDADES -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.4rem; border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    📖 Generalidades de la Formación Profesional Integral
+                </h4>
+                <div
+                    style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 25px; border-radius: 12px; margin-top: 20px;">
+                    <p style="margin-top: 0;"><strong>La Formación Profesional Integral (FPI)</strong> es un proceso
+                        educativo teórico-práctico que integra:</p>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Formación Tecnológica:</strong> Conocimientos técnicos, tecnológicos y actitudes
+                            para desempeñarse en una ocupación.</li>
+                        <li><strong>Formación Social:</strong> Valores éticos, trabajo en equipo, comunicación y
+                            desarrollo humano integral.</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box tip-warning" style="margin-top: 20px;">
+                    <div class="tip-icon">💡</div>
+                    <div class="tip-content">
+                        <strong>Recuerda:</strong>
+                        La FPI se desarrolla mediante el <strong>Aprendizaje por Proyectos</strong>, donde el aprendiz
+                        resuelve problemas
+                        reales del sector productivo. NO es solo transmisión de conocimiento, es construcción de
+                        competencias.
+                    </div>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px;">
+                    <div
+                        style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2.5rem;">🎓</div>
+                        <strong style="color: var(--sena-blue);">Competencias</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">Desarrollo integral del ser, saber y
+                            hacer</p>
+                    </div>
+                    <div
+                        style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2.5rem;">🔧</div>
+                        <strong style="color: var(--sena-blue);">Proyectos</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">Metodología activa de aprendizaje
+                        </p>
+                    </div>
+                    <div
+                        style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2.5rem;">🤝</div>
+                        <strong style="color: var(--sena-blue);">Sector Productivo</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">Vinculación real con empresas</p>
+                    </div>
+                    <div
+                        style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="font-size: 2.5rem;">📊</div>
+                        <strong style="color: var(--sena-blue);">Evidencias</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">Evaluación basada en resultados</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -625,7 +720,7 @@
                         <h4 class="timeline-title">Acuerdo 12</h4>
                         <p class="timeline-desc">Lineamientos de la política Técnico-Pedagógica.</p>
                         <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0012_1985.htm"
-                            target="_blank" class="btn-link">Ver Acuerdo</a>
+                            target="_blank" rel="noopener" class="btn-link">Ver Acuerdo</a>
                     </div>
                 </div>
 
@@ -637,7 +732,7 @@
                         <p class="timeline-desc"><strong>La "Constitución" del SENA.</strong> Reestructura el servicio y
                             define la misión.</p>
                         <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=14930"
-                            target="_blank" class="btn-link">Ver Ley Oficial</a>
+                            target="_blank" rel="noopener" class="btn-link">Ver Ley Oficial</a>
                     </div>
                 </div>
 
@@ -648,7 +743,7 @@
                         <h4 class="timeline-title">Acuerdo 08</h4>
                         <p class="timeline-desc">Estatuto de la Formación Profesional Integral.</p>
                         <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0008_1997.htm"
-                            target="_blank" class="btn-link">Ver Acuerdo</a>
+                            target="_blank" rel="noopener" class="btn-link">Ver Acuerdo</a>
                     </div>
                 </div>
 
@@ -659,7 +754,7 @@
                         <h4 class="timeline-title">Decreto 249 & Res. 0642</h4>
                         <p class="timeline-desc">Estructura del SENA y Jornada laboral del instructor.</p>
                         <a href="https://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1055999"
-                            target="_blank" class="btn-link">Ver Decreto 249</a>
+                            target="_blank" rel="noopener" class="btn-link">Ver Decreto 249</a>
                     </div>
                 </div>
 
@@ -671,7 +766,7 @@
                         <p class="timeline-desc"><strong>Reglamento del Aprendiz.</strong> Fundamental para la
                             convivencia.</p>
                         <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0007_2012.htm"
-                            target="_blank" class="btn-link">Ver Reglamento</a>
+                            target="_blank" rel="noopener" class="btn-link">Ver Reglamento</a>
                     </div>
                 </div>
 
@@ -682,7 +777,7 @@
                         <h4 class="timeline-title">Acuerdo 03</h4>
                         <p class="timeline-desc">Política Nacional de Calidad SENA.</p>
                         <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0003_2013.htm"
-                            target="_blank" class="btn-link">Ver Acuerdo</a>
+                            target="_blank" rel="noopener" class="btn-link">Ver Acuerdo</a>
                     </div>
                 </div>
 
@@ -701,7 +796,8 @@
         <!-- SECCIÓN FASE 1 -->
         <div id="fase1" class="content-area">
             <h3 class="section-title">🛠️ Fase 1: Alistamiento</h3>
-            <p>Preparar el terreno antes de la llegada de los aprendices.</p>
+            <p>Preparar el terreno antes de la llegada de los aprendices. Esta fase es crítica para el éxito del proceso
+                formativo.</p>
 
             <!-- TIP CRÍTICO: Planeación -->
             <div class="tip-box tip-danger">
@@ -714,37 +810,165 @@
                 </div>
             </div>
 
-            <div class="process-grid">
-                <div class="process-card">
-                    <div class="process-number">1</div>
-                    <h4>Proyecto Formativo</h4>
-                    <p>Revisión y ajustes del Proyecto. ¿Es viable? ¿Soluciona un problema real?</p>
-                </div>
+            <!-- 6.1 Verificación de Instructores, Materiales y Ambientes -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.3rem; border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    6.1 Verificación de Instructores, Materiales y Ambientes
+                </h4>
+                <div class="process-grid" style="margin-top: 20px;">
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h4>Proyecto Formativo</h4>
+                        <p>Revisión y ajustes del Proyecto. ¿Es viable? ¿Soluciona un problema real?</p>
+                    </div>
 
-                <div class="process-card">
-                    <div class="process-number">2</div>
-                    <h4>Planeación Pedagógica</h4>
-                    <p>El "mapa de ruta". Define qué resultados verás, cuándo y con qué actividades.</p>
-                    <span class="format-badge">GFPI-F-134</span>
-                </div>
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h4>Planeación Pedagógica</h4>
+                        <p>El "mapa de ruta". Define qué resultados verás, cuándo y con qué actividades.</p>
+                        <span class="format-badge">GFPI-F-134</span>
+                    </div>
 
-                <div class="process-card">
-                    <div class="process-number">3</div>
-                    <h4>Recursos y Materiales</h4>
-                    <p>Solicitar materiales con tiempo. No esperes a necesitar el marcador para pedirlo.</p>
-                </div>
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h4>Recursos y Materiales</h4>
+                        <p>Solicitar materiales con tiempo. No esperes a necesitar el marcador para pedirlo.</p>
+                    </div>
 
-                <div class="process-card">
-                    <div class="process-number">4</div>
-                    <h4>Ambientes</h4>
-                    <p>Chequeo de equipos. Reporta daños a la mesa de ayuda ANTES de iniciar ficha.</p>
+                    <div class="process-card">
+                        <div class="process-number">4</div>
+                        <h4>Ambientes de Aprendizaje</h4>
+                        <p>Chequeo de equipos. Reporta daños a la mesa de ayuda ANTES de iniciar ficha.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="tip-box tip-success">
+            <!-- 6.2 Programación de Instructores -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.3rem; border-bottom: 3px solid var(--sena-orange); padding-bottom: 10px;">
+                    6.2 Programación de Instructores
+                </h4>
+                <p>La programación del instructor está regulada por la Resolución 0642 de 2004 sobre jornada laboral.
+                </p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div
+                        style="background: linear-gradient(135deg, #e1f5fe, #b3e5fc); padding: 25px; border-radius: 12px;">
+                        <h5 style="margin-top: 0; color: var(--sena-blue);">⏰ Jornada Laboral</h5>
+                        <ul style="padding-left: 18px; margin-bottom: 0;">
+                            <li><strong>44 horas semanales</strong> de trabajo</li>
+                            <li>Hasta <strong>32 horas</strong> de formación directa</li>
+                            <li>Mínimo <strong>12 horas</strong> para actividades complementarias</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 25px; border-radius: 12px;">
+                        <h5 style="margin-top: 0; color: #e65100;">📋 Actividades Complementarias</h5>
+                        <ul style="padding-left: 18px; margin-bottom: 0;">
+                            <li>Planeación y actualización de guías</li>
+                            <li>Evaluación y retroalimentación</li>
+                            <li>Reuniones de programa</li>
+                            <li>Seguimiento a etapa productiva</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-warning" style="margin-top: 20px;">
+                    <div class="tip-icon">💡</div>
+                    <div class="tip-content">
+                        <strong>Tip de Programación:</strong>
+                        Si te programan más de 32 horas de formación directa, habla con tu coordinador.
+                        Las 12 horas complementarias son un <strong>derecho</strong>, no un privilegio.
+                        Las necesitas para planear, evaluar y mejorar continuamente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.3 Planear Actividades de Aprendizaje -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.3rem; border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    6.3 Planear las Actividades de Aprendizaje
+                </h4>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin-top: 20px;">
+                    <p style="margin-top: 0;"><strong>La planeación pedagógica debe incluir:</strong></p>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                        <div
+                            style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid var(--sena-green);">
+                            <strong>Resultados de Aprendizaje</strong>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0;">¿Qué debe lograr el aprendiz?</p>
+                        </div>
+                        <div
+                            style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid var(--sena-blue);">
+                            <strong>Actividades</strong>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0;">¿Cómo lo va a lograr?</p>
+                        </div>
+                        <div
+                            style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid var(--sena-orange);">
+                            <strong>Evidencias</strong>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0;">¿Cómo lo demuestra?</p>
+                        </div>
+                        <div
+                            style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                            <strong>Criterios</strong>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0;">¿Cómo se evalúa?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-info" style="margin-top: 20px;">
+                    <div class="tip-icon">📝</div>
+                    <div class="tip-content">
+                        <strong>Recuerda:</strong>
+                        La guía de aprendizaje (GFPI-F-135) es el "contrato" con el aprendiz. Debe ser clara,
+                        con instrucciones paso a paso, y debe entregarse <strong>al inicio de cada fase del
+                            proyecto</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herramientas del Coordinador -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.3rem; border-bottom: 3px solid var(--sena-orange); padding-bottom: 10px;">
+                    🔧 Herramientas de Apoyo - Coordinador Académico
+                </h4>
+                <p>El Coordinador Académico es tu aliado. Estas son las herramientas que usa para apoyarte:</p>
+
+                <div class="process-grid" style="margin-top: 20px;">
+                    <div class="process-card" style="border-top: 4px solid var(--sena-blue);">
+                        <h4>Sofia Plus - Reportes</h4>
+                        <p>Seguimiento a juicios, novedades, y estados de aprendices.</p>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid var(--sena-green);">
+                        <h4>Territorium Analytics</h4>
+                        <p>Estadísticas de participación y avance en el LMS.</p>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid var(--sena-orange);">
+                        <h4>Observación de Clase</h4>
+                        <p>Visitas programadas para retroalimentación pedagógica.</p>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-success" style="margin-top: 20px;">
+                    <div class="tip-icon">🤝</div>
+                    <div class="tip-content">
+                        <strong>Comunicación Proactiva:</strong>
+                        No esperes a que el coordinador te busque. Reporta avances, dificultades y necesidades
+                        de manera proactiva. Una buena relación con coordinación facilita todo el proceso.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box tip-success" style="margin-top: 30px;">
                 <div class="tip-icon">✅</div>
                 <div class="tip-content">
-                    <strong>Buenas Prácticas:</strong>
+                    <strong>Buenas Prácticas Generales:</strong>
                     Crea una carpeta digital (Drive/SharePoint) compartida con tu coordinador desde el día 1. Sube allí
                     tu planeación y guías. Esto demuestra transparencia y orden.
                 </div>
@@ -811,7 +1035,8 @@
                 <div class="process-card">
                     <h4>2. Juicio Avalativo</h4>
                     <p>En Sofia Plus solo existen dos estados finales: <strong>Aprobado (A)</strong> o
-                        <strong>Deficiente (D)</strong>.</p>
+                        <strong>Deficiente (D)</strong>.
+                    </p>
                 </div>
                 <div class="process-card">
                     <h4>3. Plan de Mejoramiento</h4>
@@ -840,11 +1065,269 @@
             </div>
         </div>
 
+        <!-- SECCIÓN PORTAFOLIO DE EVIDENCIAS -->
+        <div id="portafolio" class="content-area">
+            <h3 class="section-title">📁 Portafolio de Evidencias</h3>
+            <p>El portafolio es la memoria documental de todo el proceso formativo. Debe existir tanto para el
+                instructor como para cada aprendiz.</p>
+
+            <div class="tip-box tip-danger">
+                <div class="tip-icon">⚠️</div>
+                <div class="tip-content">
+                    <strong>Error Crítico:</strong>
+                    Sin portafolio organizado, no hay forma de demostrar que la formación se realizó correctamente.
+                    En una auditoría, esto puede generar hallazgos mayores y afectar la certificación.
+                </div>
+            </div>
+
+            <!-- 6.5.1 Portafolio del Instructor -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.4rem; border-bottom: 3px solid var(--sena-orange); padding-bottom: 10px;">
+                    👨‍🏫 6.5.1 Portafolio de Evidencias del Instructor
+                </h4>
+                <p>Documentación que el instructor debe mantener actualizada durante toda la ejecución:</p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 12px; border-left: 5px solid var(--sena-green);">
+                        <h5 style="margin-top: 0; color: var(--sena-dark-green);">📋 Documentos de Planeación</h5>
+                        <ul style="padding-left: 18px; margin-bottom: 0;">
+                            <li>Proyecto Formativo aprobado</li>
+                            <li>Planeación Pedagógica (GFPI-F-134)</li>
+                            <li>Guías de Aprendizaje (GFPI-F-135)</li>
+                            <li>Instrumentos de Evaluación</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 12px; border-left: 5px solid var(--sena-blue);">
+                        <h5 style="margin-top: 0; color: var(--sena-blue);">📝 Documentos de Ejecución</h5>
+                        <ul style="padding-left: 18px; margin-bottom: 0;">
+                            <li>Actas de Concertación</li>
+                            <li>Control de Asistencia</li>
+                            <li>Planes de Mejoramiento</li>
+                            <li>Actas de Comité de Evaluación</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 12px; border-left: 5px solid var(--sena-orange);">
+                        <h5 style="margin-top: 0; color: #e65100;">📊 Seguimiento</h5>
+                        <ul style="padding-left: 18px; margin-bottom: 0;">
+                            <li>Reportes de evaluación</li>
+                            <li>Novedades de aprendices</li>
+                            <li>Juicios de evaluación</li>
+                            <li>Actas de reuniones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-success" style="margin-top: 25px;">
+                    <div class="tip-icon">💡</div>
+                    <div class="tip-content">
+                        <strong>Buena Práctica:</strong>
+                        Organiza tu portafolio en carpetas digitales por ficha:
+                        <code>FICHA_XXXXXXX/01_Planeacion/</code>,
+                        <code>02_Ejecucion/</code>, <code>03_Evaluacion/</code>. Esto facilita localizar cualquier
+                        documento en segundos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.5.2 Portafolio del Aprendiz -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.4rem; border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    👨‍🎓 6.5.2 Portafolio de Evidencias del Aprendiz
+                </h4>
+                <p>Cada aprendiz debe construir su propio portafolio con las evidencias de su proceso formativo:</p>
+
+                <div class="process-grid">
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h4>Evidencias de Conocimiento</h4>
+                        <p>Pruebas escritas, cuestionarios, evaluaciones orales, mapas conceptuales.</p>
+                        <span class="format-badge">Saber</span>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h4>Evidencias de Desempeño</h4>
+                        <p>Videos, listas de chequeo, observación directa del proceso de trabajo.</p>
+                        <span class="format-badge">Hacer</span>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h4>Evidencias de Producto</h4>
+                        <p>Entregables finales: proyectos, informes, prototipos, manuales.</p>
+                        <span class="format-badge">Resultado</span>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-warning" style="margin-top: 25px;">
+                    <div class="tip-icon">📌</div>
+                    <div class="tip-content">
+                        <strong>Importante:</strong>
+                        Las evidencias deben ser <strong>auténticas</strong> (producidas por el aprendiz),
+                        <strong>pertinentes</strong> (relacionadas con el RAP), y <strong>suficientes</strong>
+                        (demuestran el logro de la competencia).
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.5.3 Construcción y Registro -->
+            <div style="margin-top: 40px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.4rem; border-bottom: 3px solid var(--sena-orange); padding-bottom: 10px;">
+                    🔧 6.5.3 Construcción y Registro del Portafolio
+                </h4>
+
+                <div
+                    style="background: linear-gradient(135deg, #e1f5fe, #b3e5fc); padding: 25px; border-radius: 12px; margin-top: 20px;">
+                    <h5 style="margin-top: 0; color: var(--sena-blue);">Pasos para la construcción:</h5>
+                    <ol style="padding-left: 20px;">
+                        <li><strong>Definir estructura:</strong> Organizar carpetas según fases del proyecto formativo.
+                        </li>
+                        <li><strong>Recolectar evidencias:</strong> Guardar cada evidencia inmediatamente después de la
+                            actividad.</li>
+                        <li><strong>Etiquetar correctamente:</strong> Nombre, fecha, RAP asociado, tipo de evidencia.
+                        </li>
+                        <li><strong>Retroalimentar:</strong> Incluir las observaciones del instructor en cada evidencia.
+                        </li>
+                        <li><strong>Respaldar:</strong> Mantener copias en la nube (Territorium, Drive, OneDrive).</li>
+                    </ol>
+                </div>
+
+                <div class="tip-box tip-info" style="margin-top: 20px;">
+                    <div class="tip-icon">💻</div>
+                    <div class="tip-content">
+                        <strong>Herramientas Recomendadas:</strong>
+                        Utiliza <strong>Territorium/Zajuna</strong> como repositorio oficial. Para respaldo adicional,
+                        recomienda a los aprendices usar Google Drive o OneDrive con una estructura de carpetas
+                        estandarizada.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN ETAPA PRODUCTIVA -->
+        <div id="productiva" class="content-area">
+            <h3 class="section-title">🏭 Orientaciones para la Etapa Productiva</h3>
+            <p>La etapa productiva es el momento en que el aprendiz aplica sus competencias en un entorno real de
+                trabajo.</p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px;">
+                <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 30px; border-radius: 12px;">
+                    <h4 style="color: var(--sena-dark-green); margin-top:0;">📋 Modalidades de Etapa Productiva</h4>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Contrato de Aprendizaje:</strong> Vinculación con empresa patrocinadora.</li>
+                        <li><strong>Pasantía:</strong> Práctica en empresa sin vinculación laboral.</li>
+                        <li><strong>Proyecto Productivo:</strong> Emprendimiento propio del aprendiz.</li>
+                        <li><strong>Monitoría:</strong> Apoyo a procesos en el centro de formación.</li>
+                        <li><strong>Vinculación Laboral:</strong> Validación por trabajo relacionado.</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 30px; border-radius: 12px;">
+                    <h4 style="color: var(--sena-blue); margin-top:0;">👨‍💼 Rol del Instructor</h4>
+                    <ul style="padding-left: 20px;">
+                        <li>Orientar al aprendiz en la búsqueda de empresa.</li>
+                        <li>Verificar que la empresa cumple requisitos.</li>
+                        <li>Realizar seguimiento periódico (mínimo mensual).</li>
+                        <li>Evaluar las competencias en contexto real.</li>
+                        <li>Documentar el proceso en Sofia Plus.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-box tip-danger" style="margin-top: 30px;">
+                <div class="tip-icon">⚠️</div>
+                <div class="tip-content">
+                    <strong>Alerta Crítica:</strong>
+                    El aprendiz NO puede iniciar etapa productiva sin tener <strong>aprobadas todas las
+                        competencias</strong>
+                    de la etapa lectiva. Verificar en Sofia Plus antes de autorizar el inicio.
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <h4 style="color: var(--sena-blue); font-size: 1.3rem;">📊 Seguimiento en Etapa Productiva</h4>
+                <div class="process-grid" style="margin-top: 20px;">
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h4>Bitácora</h4>
+                        <p>El aprendiz debe registrar sus actividades semanalmente en la bitácora de Sofia Plus.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h4>Visita/Contacto</h4>
+                        <p>El instructor debe verificar el desempeño con el jefe inmediato de la empresa.</p>
+                    </div>
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h4>Evaluación Final</h4>
+                        <p>Al finalizar, evaluar competencias con el concepto de la empresa y el aprendiz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box tip-success" style="margin-top: 25px;">
+                <div class="tip-icon">✅</div>
+                <div class="tip-content">
+                    <strong>Buena Práctica:</strong>
+                    Crea un grupo de WhatsApp o canal de Teams con tus aprendices en etapa productiva.
+                    Esto facilita el seguimiento y la resolución rápida de dudas o problemas.
+                </div>
+            </div>
+
+            <!-- Retroalimentación del Programa -->
+            <div style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px;">
+                <h4
+                    style="color: var(--sena-blue); font-size: 1.4rem; border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    🔄 Retroalimentar el Programa de Formación
+                </h4>
+                <p>Al finalizar cada ciclo formativo, es fundamental documentar lecciones aprendidas:</p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div style="background: #fff3e0; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem;">📝</div>
+                        <strong>Ajustes al Proyecto</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">¿Qué actividades funcionaron mejor?
+                            ¿Cuáles necesitan mejoras?</p>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem;">🎯</div>
+                        <strong>Actualización Técnica</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">¿Hay nuevas tecnologías o normativas
+                            que incluir?</p>
+                    </div>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem;">💬</div>
+                        <strong>Feedback Empresarial</strong>
+                        <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0;">¿Qué dicen las empresas sobre las
+                            competencias de los egresados?</p>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-info" style="margin-top: 25px;">
+                    <div class="tip-icon">📊</div>
+                    <div class="tip-content">
+                        <strong>Proceso de Mejora Continua:</strong>
+                        Documenta estas observaciones y compártelas con el equipo de diseño curricular.
+                        Usa el formato de <strong>Solicitud de Ajuste al Programa</strong> cuando sea necesario.
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- SECCIÓN CHECKLIST -->
         <div id="checklist" class="content-area">
             <h3 class="section-title">✅ Checklist Interactivo</h3>
-            <p>Verifica tu paz mental antes de cerrar el mes.</p>
+            <p>Verifica tu paz mental antes de cerrar el mes. Un checklist completo para asegurar que no olvides ningún
+                paso crítico.</p>
 
+            <!-- Checklist por Fase -->
+            <h4 style="color: var(--sena-blue); margin-top: 30px; margin-bottom: 15px;">📋 Fase de Alistamiento</h4>
             <div style="background: #fff; border-radius: 12px; padding: 10px;">
                 <div class="checklist-item" onclick="toggleCheck(this)">
                     <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
@@ -853,11 +1336,21 @@
                                 stroke-linejoin="round" />
                         </svg></div>
                     <div>
-                        <h4 style="margin:0;">Planeación Pedagógica en Drive/LMS</h4>
+                        <h4 style="margin:0;">Proyecto Formativo Revisado</h4>
+                        <small style="color:#666;">¿Está aprobado y actualizado en Sofia Plus?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Planeación Pedagógica (GFPI-F-134)</h4>
                         <small style="color:#666;">¿Coincide con lo que ejecutaste?</small>
                     </div>
                 </div>
-
                 <div class="checklist-item" onclick="toggleCheck(this)">
                     <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
                             xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -865,11 +1358,10 @@
                                 stroke-linejoin="round" />
                         </svg></div>
                     <div>
-                        <h4 style="margin:0;">Guías disponibles para Aprendices</h4>
-                        <small style="color:#666;">¿Están subidas a la plataforma?</small>
+                        <h4 style="margin:0;">Ambiente de Aprendizaje Verificado</h4>
+                        <small style="color:#666;">¿Reportaste daños a mesa de ayuda antes de iniciar?</small>
                     </div>
                 </div>
-
                 <div class="checklist-item" onclick="toggleCheck(this)">
                     <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
                             xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -877,30 +1369,354 @@
                                 stroke-linejoin="round" />
                         </svg></div>
                     <div>
-                        <h4 style="margin:0;">Asistencia al día en Sofia Plus</h4>
-                        <small style="color:#666;">¿Reportaste las deserciones a tiempo?</small>
-                    </div>
-                </div>
-
-                <div class="checklist-item" onclick="toggleCheck(this)">
-                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
-                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></div>
-                    <div>
-                        <h4 style="margin:0;">Juicios de Evaluación Registrados</h4>
-                        <small style="color:#666;">¿Verificaste que los "A" aparezcan en Sofia Plus?</small>
+                        <h4 style="margin:0;">Materiales y Recursos Solicitados</h4>
+                        <small style="color:#666;">¿Hiciste la solicitud con tiempo suficiente?</small>
                     </div>
                 </div>
             </div>
 
-            <div class="tip-box tip-info">
+            <h4 style="color: var(--sena-green); margin-top: 30px; margin-bottom: 15px;">🚀 Fase de Ejecución</h4>
+            <div style="background: #fff; border-radius: 12px; padding: 10px;">
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Inducción Realizada</h4>
+                        <small style="color:#666;">¿Socializaste programa, proyecto y reglamento?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Acta de Concertación Firmada</h4>
+                        <small style="color:#666;">¿Todos los aprendices firmaron la concertación?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Guías en Plataforma LMS</h4>
+                        <small style="color:#666;">¿Están subidas a Territorium/Zajuna?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Asistencia Registrada en Sofia Plus</h4>
+                        <small style="color:#666;">¿Reportaste las novedades y deserciones a tiempo?</small>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="color: var(--sena-orange); margin-top: 30px; margin-bottom: 15px;">🏁 Fase de Evaluación</h4>
+            <div style="background: #fff; border-radius: 12px; padding: 10px;">
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Evidencias Retroalimentadas</h4>
+                        <small style="color:#666;">¿Retroalimentaste en menos de 5 días hábiles?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Juicios Registrados en Sofia Plus</h4>
+                        <small style="color:#666;">¿Verificaste que los "A" aparezcan correctamente?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Planes de Mejoramiento Formalizados</h4>
+                        <small style="color:#666;">¿Los aprendices que reprobaron firmaron acta?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Portafolio del Instructor Actualizado</h4>
+                        <small style="color:#666;">¿Toda la documentación está en tu carpeta digital?</small>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="color: #9c27b0; margin-top: 30px; margin-bottom: 15px;">🏭 Etapa Productiva</h4>
+            <div style="background: #fff; border-radius: 12px; padding: 10px;">
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Competencias Lectivas Aprobadas</h4>
+                        <small style="color:#666;">¿Verificaste en Sofia Plus antes de autorizar inicio?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Seguimiento Mensual Realizado</h4>
+                        <small style="color:#666;">¿Contactaste a la empresa y al aprendiz?</small>
+                    </div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Bitácoras Revisadas</h4>
+                        <small style="color:#666;">¿Verificaste que los aprendices suben sus bitácoras
+                            semanalmente?</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box tip-info" style="margin-top: 30px;">
                 <div class="tip-icon">🔎</div>
                 <div class="tip-content">
                     <strong>Auto-Auditoría:</strong>
                     Imagina que mañana te auditan. ¿Podrías mostrar evidencia de todo esto en menos de 5 minutos? Si la
                     respuesta es no, organiza tus carpetas hoy mismo.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN REFERENCIAS -->
+        <div id="referencias" class="content-area">
+            <h3 class="section-title">📚 Referencias Bibliográficas y Formatos</h3>
+            <p>Documentación oficial y formatos que todo instructor debe conocer y utilizar.</p>
+
+            <!-- Normativas Principales -->
+            <div style="margin-top: 30px;">
+                <h4 style="color: var(--sena-blue); border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    ⚖️ Marco Normativo Principal
+                </h4>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; display: flex; align-items: start; gap: 15px;">
+                        <div
+                            style="background: var(--sena-green); color: white; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.85rem;">
+                            1985</div>
+                        <div>
+                            <strong>Acuerdo 12</strong>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Lineamientos de la política
+                                Técnico-Pedagógica.</p>
+                            <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0012_1985.htm"
+                                target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--sena-blue);">Ver
+                                documento →</a>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; display: flex; align-items: start; gap: 15px;">
+                        <div
+                            style="background: var(--sena-blue); color: white; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.85rem;">
+                            1994</div>
+                        <div>
+                            <strong>Ley 119</strong>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Reestructuración del SENA y
+                                definición de misión.</p>
+                            <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=14930"
+                                target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--sena-blue);">Ver
+                                Ley →</a>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; display: flex; align-items: start; gap: 15px;">
+                        <div
+                            style="background: var(--sena-orange); color: white; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.85rem;">
+                            1997</div>
+                        <div>
+                            <strong>Acuerdo 08</strong>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Estatuto de la Formación
+                                Profesional Integral.</p>
+                            <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0008_1997.htm"
+                                target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--sena-blue);">Ver
+                                Acuerdo →</a>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #fff3e0; padding: 20px; border-radius: 10px; display: flex; align-items: start; gap: 15px;">
+                        <div
+                            style="background: #ef5350; color: white; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.85rem;">
+                            2012</div>
+                        <div>
+                            <strong>Acuerdo 07 - Reglamento del Aprendiz</strong>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">⚠️ Documento CLAVE para el
+                                debido proceso.</p>
+                            <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0007_2012.htm"
+                                target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--sena-blue);">Ver
+                                Reglamento
+                                →</a>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; display: flex; align-items: start; gap: 15px;">
+                        <div
+                            style="background: #9c27b0; color: white; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.85rem;">
+                            2013</div>
+                        <div>
+                            <strong>Acuerdo 03</strong>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Política Nacional de Calidad
+                                SENA.</p>
+                            <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0003_2013.htm"
+                                target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--sena-blue);">Ver
+                                Acuerdo →</a>
+                        </div>
+                    </div>
+                    <div
+                        style="background: #e8f5e9; padding: 20px; border-radius: 10px; display: flex; align-items: start; gap: 15px;">
+                        <div
+                            style="background: var(--sena-dark-green); color: white; padding: 8px 12px; border-radius: 6px; font-weight: bold; font-size: 0.85rem;">
+                            2017</div>
+                        <div>
+                            <strong>Guía GFPI-G-013</strong>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Guía para desarrollar los
+                                procesos formativos (Documento actual).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formatos Esenciales -->
+            <div style="margin-top: 40px;">
+                <h4 style="color: var(--sena-blue); border-bottom: 3px solid var(--sena-orange); padding-bottom: 10px;">
+                    📄 Formatos Esenciales para la Formación
+                </h4>
+                <div class="process-grid" style="margin-top: 20px;">
+                    <div class="process-card" style="border-top: 4px solid var(--sena-green);">
+                        <h4>GFPI-F-134</h4>
+                        <p>Planeación Pedagógica</p>
+                        <span class="format-badge">Obligatorio</span>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid var(--sena-green);">
+                        <h4>GFPI-F-135</h4>
+                        <p>Guía de Aprendizaje</p>
+                        <span class="format-badge">Obligatorio</span>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid var(--sena-blue);">
+                        <h4>GFPI-F-147</h4>
+                        <p>Procedimiento Ejecución de la Formación</p>
+                        <span class="format-badge">Referencia</span>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid var(--sena-orange);">
+                        <h4>GFPI-F-022</h4>
+                        <p>Formato de Seguimiento y Evaluación</p>
+                        <span class="format-badge">Evaluación</span>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid #9c27b0;">
+                        <h4>GFPI-F-023</h4>
+                        <p>Plan de Mejoramiento</p>
+                        <span class="format-badge">Cuando aplique</span>
+                    </div>
+                    <div class="process-card" style="border-top: 4px solid #607d8b;">
+                        <h4>GFPI-F-024</h4>
+                        <p>Instrumento de Evaluación</p>
+                        <span class="format-badge">Por RAP</span>
+                    </div>
+                </div>
+
+                <div class="tip-box tip-info" style="margin-top: 25px;">
+                    <div class="tip-icon">💡</div>
+                    <div class="tip-content">
+                        <strong>¿Dónde encontrar los formatos?</strong>
+                        Todos los formatos oficiales están disponibles en <strong>Compromiso SENA</strong> o en la
+                        <strong>carpeta compartida de tu centro</strong>. Siempre verifica que estás usando la versión
+                        más reciente.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herramientas Digitales -->
+            <div style="margin-top: 40px;">
+                <h4 style="color: var(--sena-blue); border-bottom: 3px solid var(--sena-green); padding-bottom: 10px;">
+                    💻 Herramientas Digitales Oficiales
+                </h4>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div
+                        style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 25px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 2.5rem;">🎓</div>
+                        <strong style="font-size: 1.1rem;">Sofia Plus</strong>
+                        <p style="font-size: 0.9rem; color: #444; margin: 10px 0 0;">Gestión de la formación, juicios,
+                            novedades, asistencia.</p>
+                        <a href="https://www.sofiaplus.edu.co" target="_blank" rel="noopener" class="btn-link"
+                            style="margin-top: 15px;">Acceder</a>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 25px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 2.5rem;">📚</div>
+                        <strong style="font-size: 1.1rem;">Territorium / Zajuna</strong>
+                        <p style="font-size: 0.9rem; color: #444; margin: 10px 0 0;">LMS para contenido, actividades y
+                            evaluaciones.</p>
+                        <a href="https://zajuna.sena.edu.co" target="_blank" rel="noopener" class="btn-link"
+                            style="margin-top: 15px; background: var(--sena-green);">Acceder</a>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 25px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 2.5rem;">📋</div>
+                        <strong style="font-size: 1.1rem;">Compromiso SENA</strong>
+                        <p style="font-size: 0.9rem; color: #444; margin: 10px 0 0;">Documentos, normatividad y recursos
+                            institucionales.</p>
+                        <a href="https://compromiso.sena.edu.co" target="_blank" rel="noopener" class="btn-link"
+                            style="margin-top: 15px; background: var(--sena-orange);">Acceder</a>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #f3e5f5, #e1bee7); padding: 25px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 2.5rem;">📖</div>
+                        <strong style="font-size: 1.1rem;">Normograma SENA</strong>
+                        <p style="font-size: 0.9rem; color: #444; margin: 10px 0 0;">Toda la normatividad institucional
+                            actualizada.</p>
+                        <a href="https://normograma.sena.edu.co" target="_blank" rel="noopener" class="btn-link"
+                            style="margin-top: 15px; background: #9c27b0;">Acceder</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box tip-success" style="margin-top: 30px;">
+                <div class="tip-icon">✅</div>
+                <div class="tip-content">
+                    <strong>Mantente Actualizado:</strong>
+                    Las normativas y formatos cambian periódicamente. Suscríbete a las comunicaciones oficiales de tu
+                    centro y revisa periódicamente el Normograma SENA para estar al día.
                 </div>
             </div>
         </div>
