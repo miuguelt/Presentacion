@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Interactivo GFPI-G-013 | SENA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta de colores SENA Modernizada */
+            --sena-green: #39a900;
+            --sena-dark-green: #2d8500;
+            --sena-blue: #00324d;
+            --sena-light-blue: #004d73;
+            --sena-orange: #fc7323;
+            --text-main: #2c3e50;
+            --text-light: #6c7a89;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 15px 30px rgba(57, 169, 0, 0.15);
+            --radius: 16px;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Hero */
+        header {
+            background: linear-gradient(135deg, var(--sena-blue) 0%, var(--sena-green) 100%);
+            color: var(--white);
+            padding: 4rem 1rem 6rem;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h2 {
+            margin: 1rem 0 0;
+            font-weight: 300;
+            font-size: 1.4rem;
+            opacity: 0.95;
+        }
+
+        .badge {
+            background: var(--sena-orange);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(252, 115, 35, 0.3);
+        }
+
+        /* Container & Navigation */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: -60px;
+        }
+
+        .nav-card {
+            background: var(--white);
+            padding: 25px 15px;
+            border-radius: var(--radius);
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--sena-green);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .nav-card:hover::after,
+        .nav-card.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-card.active {
+            background: #fff;
+            border-color: rgba(57, 169, 0, 0.1);
+        }
+
+        .nav-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .nav-card:hover .nav-icon {
+            transform: scale(1.1);
+        }
+
+        .nav-title {
+            font-weight: 700;
+            color: var(--sena-blue);
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+
+        /* Content Area */
+        .content-area {
+            background: var(--white);
+            min-height: 400px;
+            margin-top: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--card-shadow);
+            padding: 50px;
+            display: none;
+            animation: slideUp 0.4s ease-out;
+            position: relative;
+        }
+
+        .content-area.active-content {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h3.section-title {
+            color: var(--sena-green);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h3.section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: #eee;
+            margin-left: 20px;
+        }
+
+        /* TIP BOXES - ENHANCED */
+        .tip-box {
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            gap: 15px;
+            align-items: start;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tip-box::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+        }
+
+        /* Tip Amarillo (Advertencia/Ojo) */
+        .tip-warning {
+            background: #fff8e1;
+            border-left: 5px solid #ffca28;
+        }
+
+        .tip-warning::before {
+            background: #ffca28;
+        }
+
+        /* Tip Azul (Información/Proceso) */
+        .tip-info {
+            background: #e1f5fe;
+            border-left: 5px solid #039be5;
+        }
+
+        .tip-info::before {
+            background: #039be5;
+        }
+
+        /* Tip Rojo (Error Crítico) */
+        .tip-danger {
+            background: #ffebee;
+            border-left: 5px solid #ef5350;
+        }
+
+        .tip-danger::before {
+            background: #ef5350;
+        }
+
+        /* Tip Verde (Buenas Prácticas) */
+        .tip-success {
+            background: #f1f8e9;
+            border-left: 5px solid #66bb6a;
+        }
+
+        .tip-success::before {
+            background: #66bb6a;
+        }
+
+
+        .tip-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+
+        .tip-content strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        .tip-content {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #e9ecef;
+            transform: translateX(-50%);
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            background: var(--sena-orange);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px rgba(252, 115, 35, 0.3);
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -14px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -14px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--sena-blue);
+            transition: transform 0.3s;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 5px solid var(--sena-blue);
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.02);
+            z-index: 5;
+        }
+
+        .year {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--sena-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sena-dark-green);
+            margin: 0 0 10px;
+        }
+
+        .btn-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--sena-light-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-link:hover {
+            background-color: var(--sena-blue);
+        }
+
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .process-card {
+            background: #f8fcfd;
+            border: 1px solid #e1e8ed;
+            border-radius: 12px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .process-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--sena-green);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(57, 169, 0, 0.3);
+        }
+
+        .process-card h4 {
+            margin-top: 10px;
+            color: var(--sena-blue);
+            font-size: 1.1rem;
+        }
+
+        .format-badge {
+            display: inline-block;
+            background: #eef2f5;
+            color: #555;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: monospace;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        /* Checklist */
+        .checklist-item {
+            background: white;
+            border: 1px solid #eee;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .checklist-item:hover {
+            border-color: var(--sena-green);
+            background: #fafff9;
+        }
+
+        .checklist-item.checked {
+            background: #f0fdf4;
+            border-color: var(--sena-green);
+        }
+
+        .checklist-item.checked h4 {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .checkbox-custom {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .checklist-item.checked .checkbox-custom {
+            background: var(--sena-green);
+            border-color: var(--sena-green);
+            color: white;
+        }
+
+        footer {
+            background: var(--text-main);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-dot {
+                left: 10px !important;
+            }
+
+            .timeline-content {
+                border-left: 5px solid var(--sena-blue);
+                border-right: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span class="badge">Nueva Versión 2.0</span>
+        <h1>Guía Interactiva G-013</h1>
+        <h2>Ejecución de la Formación Profesional Integral SENA</h2>
+    </header>
+
+    <div class="container">
+
+        <!-- NAV GRID -->
+        <nav class="nav-grid">
+            <div class="nav-card active" onclick="showSection('intro', this)">
+                <span class="nav-icon">🧭</span>
+                <span class="nav-title">Inicio<br>Visión General</span>
+            </div>
+            <div class="nav-card" onclick="showSection('normatividad', this)">
+                <span class="nav-icon">⚖️</span>
+                <span class="nav-title">Marco<br>Normativo</span>
+            </div>
+            <div class="nav-card" onclick="showSection('fase1', this)">
+                <span class="nav-icon">🛠️</span>
+                <span class="nav-title">Fase 1<br>Alistamiento</span>
+            </div>
+            <div class="nav-card" onclick="showSection('fase2', this)">
+                <span class="nav-icon">🚀</span>
+                <span class="nav-title">Fase 2<br>Ejecución</span>
+            </div>
+            <div class="nav-card" onclick="showSection('fase3', this)">
+                <span class="nav-icon">🏁</span>
+                <span class="nav-title">Fase 3<br>Evaluación</span>
+            </div>
+            <div class="nav-card" onclick="showSection('checklist', this)">
+                <span class="nav-icon">✅</span>
+                <span class="nav-title">Checklist<br>Interactivo</span>
+            </div>
+        </nav>
+
+        <!-- SECCIÓN INTRODUCCIÓN -->
+        <div id="intro" class="content-area active-content">
+            <h3 class="section-title">¿Qué es la GFPI-G-013?</h3>
+            <p style="font-size: 1.1rem; color: #444;">Es la brújula del instructor SENA. Este documento maestro
+                estandariza y organiza paso a paso el proceso formativo, garantizando que un aprendiz en cualquier parte
+                del país reciba la misma calidad de formación.</p>
+
+            <!-- TIP: Introducción -->
+            <div class="tip-box tip-info">
+                <div class="tip-icon">ℹ️</div>
+                <div class="tip-content">
+                    <strong>¿Por qué es importante?</strong>
+                    No seguir esta guía puede resultar en "No Conformidades" durante auditorías de calidad. Más
+                    importante aún, desorganiza el proceso de aprendizaje de tus alumnos.
+                </div>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 30px; border-radius: 12px;">
+                    <h4 style="color: var(--sena-blue); margin-top:0; font-size: 1.3rem;">🎯 Objetivo Principal</h4>
+                    <p>Orientar al equipo ejecutor de la formación en la planeación, ejecución y evaluación de la
+                        Formación Profesional Integral.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 30px; border-radius: 12px;">
+                    <h4 style="color: var(--sena-dark-green); margin-top:0; font-size: 1.3rem;">👥 Responsabilidad</h4>
+                    <ul style="padding-left: 20px;">
+                        <li>Planear actividades pedagógicas.</li>
+                        <li>Ejecutar formación centrada en el aprendiz.</li>
+                        <li>Evaluar basándose en resultados.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN MARCO NORMATIVO -->
+        <div id="normatividad" class="content-area">
+            <h3 class="section-title">Marco Normativo y Legal</h3>
+            <p>La formación en el SENA se sustenta en una sólida base legal. Conocer estas normas te protege como
+                instructor y garantiza los derechos de los aprendices.</p>
+
+            <!-- TIP: Normatividad -->
+            <div class="tip-box tip-warning">
+                <div class="tip-icon">💡</div>
+                <div class="tip-content">
+                    <strong>Tip del Experto:</strong>
+                    El Reglamento del Aprendiz (Acuerdo 07 de 2012) es tu "biblia" para el debido proceso. Nunca
+                    sanciones a un aprendiz sin consultarlo primero; podrías incurrir en fallas disciplinarias.
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">1985</div>
+                        <h4 class="timeline-title">Acuerdo 12</h4>
+                        <p class="timeline-desc">Lineamientos de la política Técnico-Pedagógica.</p>
+                        <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0012_1985.htm"
+                            target="_blank" class="btn-link">Ver Acuerdo</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">1994</div>
+                        <h4 class="timeline-title">Ley 119</h4>
+                        <p class="timeline-desc"><strong>La "Constitución" del SENA.</strong> Reestructura el servicio y
+                            define la misión.</p>
+                        <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=14930"
+                            target="_blank" class="btn-link">Ver Ley Oficial</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">1997</div>
+                        <h4 class="timeline-title">Acuerdo 08</h4>
+                        <p class="timeline-desc">Estatuto de la Formación Profesional Integral.</p>
+                        <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0008_1997.htm"
+                            target="_blank" class="btn-link">Ver Acuerdo</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">2004</div>
+                        <h4 class="timeline-title">Decreto 249 & Res. 0642</h4>
+                        <p class="timeline-desc">Estructura del SENA y Jornada laboral del instructor.</p>
+                        <a href="https://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1055999"
+                            target="_blank" class="btn-link">Ver Decreto 249</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">2012</div>
+                        <h4 class="timeline-title">Acuerdo 07</h4>
+                        <p class="timeline-desc"><strong>Reglamento del Aprendiz.</strong> Fundamental para la
+                            convivencia.</p>
+                        <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0007_2012.htm"
+                            target="_blank" class="btn-link">Ver Reglamento</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">2013</div>
+                        <h4 class="timeline-title">Acuerdo 03</h4>
+                        <p class="timeline-desc">Política Nacional de Calidad SENA.</p>
+                        <a href="https://normograma.sena.edu.co/compilacion/docs/acuerdo_sena_0003_2013.htm"
+                            target="_blank" class="btn-link">Ver Acuerdo</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="year">2017</div>
+                        <h4 class="timeline-title">Guía GFPI-G-013</h4>
+                        <p class="timeline-desc">Guía para desarrollar los procesos formativos.</p>
+                        <span class="btn-link" style="background:#888; cursor:default;">Documento Actual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN FASE 1 -->
+        <div id="fase1" class="content-area">
+            <h3 class="section-title">🛠️ Fase 1: Alistamiento</h3>
+            <p>Preparar el terreno antes de la llegada de los aprendices.</p>
+
+            <!-- TIP CRÍTICO: Planeación -->
+            <div class="tip-box tip-danger">
+                <div class="tip-icon">⚠️</div>
+                <div class="tip-content">
+                    <strong>Error Común:</strong>
+                    Iniciar formación sin tener la <em>Planeación Pedagógica</em> lista. Si te auditan y estás
+                    ejecutando algo diferente a lo planeado en el formato GFPI-F-134, es un hallazgo grave. La
+                    improvisación NO es una opción.
+                </div>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h4>Proyecto Formativo</h4>
+                    <p>Revisión y ajustes del Proyecto. ¿Es viable? ¿Soluciona un problema real?</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h4>Planeación Pedagógica</h4>
+                    <p>El "mapa de ruta". Define qué resultados verás, cuándo y con qué actividades.</p>
+                    <span class="format-badge">GFPI-F-134</span>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h4>Recursos y Materiales</h4>
+                    <p>Solicitar materiales con tiempo. No esperes a necesitar el marcador para pedirlo.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h4>Ambientes</h4>
+                    <p>Chequeo de equipos. Reporta daños a la mesa de ayuda ANTES de iniciar ficha.</p>
+                </div>
+            </div>
+
+            <div class="tip-box tip-success">
+                <div class="tip-icon">✅</div>
+                <div class="tip-content">
+                    <strong>Buenas Prácticas:</strong>
+                    Crea una carpeta digital (Drive/SharePoint) compartida con tu coordinador desde el día 1. Sube allí
+                    tu planeación y guías. Esto demuestra transparencia y orden.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN FASE 2 -->
+        <div id="fase2" class="content-area">
+            <h3 class="section-title">🚀 Fase 2: Ejecución</h3>
+            <p>La hora de la verdad. Donde ocurre la magia del aprendizaje.</p>
+
+            <div class="process-grid">
+                <div class="process-card" style="border-top: 4px solid var(--sena-orange);">
+                    <h4>📌 Inducción</h4>
+                    <p>No es solo saludar. Debes socializar el programa, el proyecto y las reglas de juego
+                        (Concertación).</p>
+                </div>
+                <div class="process-card" style="border-top: 4px solid var(--sena-green);">
+                    <h4>📂 Guías de Aprendizaje</h4>
+                    <p>La guía (GFPI-G-012) es del APRENDIZ. No la escondas; súbela al LMS Territorium/Zajuna desde el
+                        primer día.</p>
+                </div>
+                <div class="process-card" style="border-top: 4px solid var(--sena-blue);">
+                    <h4>� Asistencia</h4>
+                    <p>El registro de asistencia en Sofia Plus o su sistema equivalente debe ser DIARIO o SEMANAL. Nunca
+                        mensual.</p>
+                </div>
+            </div>
+
+            <!-- TIP: Deserción -->
+            <div class="tip-box tip-warning">
+                <div class="tip-icon">🚨</div>
+                <div class="tip-content">
+                    <strong>Alerta de Deserción:</strong>
+                    Si un aprendiz falta 3 días consecutivos injustificados, debes reportar la novedad inmediatamente.
+                    Si dejas pasar el tiempo, el sistema (Sofia Plus) no te permitirá hacer el reporte de deserción
+                    correctamente después.
+                </div>
+            </div>
+
+            <!-- TIP: Estrategias -->
+            <div class="tip-box tip-info">
+                <div class="tip-icon">🧠</div>
+                <div class="tip-content">
+                    <strong>Tip Pedagógico:</strong>
+                    Varía tus estrategias. Si solo usas diapositivas, pierdes su atención. Usa Rutinas de Pensamiento,
+                    Estudios de Caso y Aprendizaje Basado en Proyectos.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN FASE 3 -->
+        <div id="fase3" class="content-area">
+            <h3 class="section-title">🏁 Fase 3: Evaluación</h3>
+            <p>Verificación de competencias y cierre administrativo.</p>
+
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <h4>1. Recolección</h4>
+                    <p>Evidencias de Conocimiento, Desempeño y Producto. Todas deben reposar en el Portafolio (Digital).
+                    </p>
+                </div>
+                <div class="process-card">
+                    <h4>2. Juicio Avalativo</h4>
+                    <p>En Sofia Plus solo existen dos estados finales: <strong>Aprobado (A)</strong> o
+                        <strong>Deficiente (D)</strong>.</p>
+                </div>
+                <div class="process-card">
+                    <h4>3. Plan de Mejoramiento</h4>
+                    <p>Es un DERECHO del aprendiz que reprueba. Debe firmarse un acta de compromiso.</p>
+                </div>
+            </div>
+
+            <!-- TIP CRÍTICO: Sofia Plus -->
+            <div class="tip-box tip-danger">
+                <div class="tip-icon">🛑</div>
+                <div class="tip-content">
+                    <strong>¡Cuidado! Error Fatal:</strong>
+                    Calificar en Territory/LMS <strong>NO</strong> es suficiente. Si no registras el juicio "Aprobado"
+                    en <strong>Sofia Plus</strong>, el aprendiz NO se certificará. Muchos instructores olvidan este paso
+                    final.
+                </div>
+            </div>
+
+            <div class="tip-box tip-success">
+                <div class="tip-icon">🌟</div>
+                <div class="tip-content">
+                    <strong>Tip del Experto:</strong>
+                    Retroalimenta las evidencias máximo 5 días hábiles después de la entrega. Una retroalimentación
+                    tardía pierde su efecto pedagógico y desmotiva al aprendiz.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN CHECKLIST -->
+        <div id="checklist" class="content-area">
+            <h3 class="section-title">✅ Checklist Interactivo</h3>
+            <p>Verifica tu paz mental antes de cerrar el mes.</p>
+
+            <div style="background: #fff; border-radius: 12px; padding: 10px;">
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Planeación Pedagógica en Drive/LMS</h4>
+                        <small style="color:#666;">¿Coincide con lo que ejecutaste?</small>
+                    </div>
+                </div>
+
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Guías disponibles para Aprendices</h4>
+                        <small style="color:#666;">¿Están subidas a la plataforma?</small>
+                    </div>
+                </div>
+
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Asistencia al día en Sofia Plus</h4>
+                        <small style="color:#666;">¿Reportaste las deserciones a tiempo?</small>
+                    </div>
+                </div>
+
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkbox-custom"><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M1 5L4.5 8.5L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <div>
+                        <h4 style="margin:0;">Juicios de Evaluación Registrados</h4>
+                        <small style="color:#666;">¿Verificaste que los "A" aparezcan en Sofia Plus?</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box tip-info">
+                <div class="tip-icon">🔎</div>
+                <div class="tip-content">
+                    <strong>Auto-Auditoría:</strong>
+                    Imagina que mañana te auditan. ¿Podrías mostrar evidencia de todo esto en menos de 5 minutos? Si la
+                    respuesta es no, organiza tus carpetas hoy mismo.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>Hecho con ❤️ para Instructores SENA</strong><br>
+            Basado en la Guía GFPI-G-013</p>
+        <p style="opacity: 0.6; font-size: 0.8rem;">© 2026 - Material Educativo</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId, cardElement) {
+            document.querySelectorAll('.content-area').forEach(el => {
+                el.classList.remove('active-content');
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.nav-card').forEach(el => {
+                el.classList.remove('active');
+            });
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            setTimeout(() => {
+                activeSection.classList.add('active-content');
+            }, 10);
+            cardElement.classList.add('active');
+        }
+
+        function toggleCheck(element) {
+            element.classList.toggle('checked');
+            const svg = element.querySelector('svg');
+            if (element.classList.contains('checked')) svg.style.display = 'block';
+            else svg.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
