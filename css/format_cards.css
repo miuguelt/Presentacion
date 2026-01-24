@@ -1,0 +1,174 @@
+/* =========================================
+   FORMAT CARDS - Premium Redesign
+   ========================================= */
+
+.format-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.format-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 0;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
+.format-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.0);
+    /* Border disappears into shadow */
+}
+
+/* Color Accents (Top Border) */
+.format-card.accent-green {
+    border-top: 5px solid var(--sena-green);
+}
+
+.format-card.accent-blue {
+    border-top: 5px solid var(--sena-blue);
+}
+
+.format-card.accent-orange {
+    border-top: 5px solid var(--sena-orange);
+}
+
+.format-card.accent-purple {
+    border-top: 5px solid #9c27b0;
+}
+
+.format-card.accent-gray {
+    border-top: 5px solid #607d8b;
+}
+
+
+.format-header {
+    padding: 25px 25px 10px;
+}
+
+.format-code {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--sena-deep-blue);
+    margin-bottom: 5px;
+    display: block;
+    letter-spacing: -0.5px;
+}
+
+.format-name {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Badge Styling */
+.format-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-mandatory {
+    background: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #ffe0b2;
+}
+
+.badge-reference {
+    background: #f5f5f5;
+    color: #616161;
+    border: 1px solid #e0e0e0;
+}
+
+.badge-procedure {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #bbdefb;
+}
+
+.badge-evaluation {
+    background: #f3e5f5;
+    color: #7b1fa2;
+    border: 1px solid #e1bee7;
+}
+
+.badge-admin {
+    background: #eceff1;
+    color: #455a64;
+    border: 1px solid #cfd8dc;
+}
+
+
+.format-footer {
+    padding: 20px 25px;
+    background: linear-gradient(to top, #fcfcfc, #ffffff);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align buttons to right */
+    gap: 10px;
+}
+
+/* Premium Download Button */
+.btn-download-premium {
+    background: var(--sena-deep-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 50, 77, 0.25);
+}
+
+.btn-download-premium:hover {
+    background: var(--sena-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 50, 77, 0.35);
+}
+
+.btn-preview-premium {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid #e0e0e0;
+    padding: 9px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-preview-premium:hover {
+    background: #f8f9fa;
+    border-color: #ccc;
+    color: var(--text-main);
+}
