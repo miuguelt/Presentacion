@@ -349,11 +349,21 @@ h3.section-title::after {
     line-height: 1;
 }
 
-.tip-content strong {
+.tip-content {
+    text-align: justify;
+}
+
+.tip-title {
     display: block;
     font-size: 1.1rem;
     margin-bottom: 8px;
     color: var(--sena-blue);
+    font-weight: 700;
+}
+
+.tip-content strong {
+    color: var(--sena-blue);
+    font-weight: 700;
 }
 
 /* Timeline */
@@ -438,7 +448,7 @@ h3.section-title::after {
 /* Process Cards */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 30px;
 }
 
@@ -501,7 +511,7 @@ h3.section-title::after {
 /* Charts & Stats */
 .chart-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 20px;
     margin-top: 25px;
 }
@@ -549,7 +559,7 @@ h3.section-title::after {
     transition: width 1s ease-out;
 }
 
-/* Chart Table */
+/* Chart Table - Redesigned for Responsiveness */
 .chart-table {
     width: 100%;
     border-collapse: collapse;
@@ -570,6 +580,36 @@ h3.section-title::after {
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
+}
+
+/* Time Distribution Cards (alternative for small screens) */
+.time-dist-cards {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.time-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid var(--sena-green);
+}
+
+.time-card-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: var(--sena-blue);
+    margin-bottom: 5px;
+}
+
+.time-card-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 /* Activity Pills */
@@ -671,6 +711,15 @@ footer::before {
 
     .stat-value {
         font-size: 2rem;
+    }
+
+    /* Toggle Table vs Cards */
+    .chart-table {
+        display: none;
+    }
+
+    .time-dist-cards {
+        display: flex;
     }
 
     /* Process Card Mobile Fix */
