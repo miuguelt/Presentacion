@@ -349,8 +349,16 @@ h3.section-title::after {
     line-height: 1;
 }
 
-.tip-content {
+.tip-content,
+.content-area p,
+.timeline-content p,
+.process-card p {
     text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    display: block;
+    width: 100%;
 }
 
 .tip-title {
