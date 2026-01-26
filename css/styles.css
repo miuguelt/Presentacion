@@ -789,12 +789,202 @@ footer::before {
 }
 
 @media (max-width: 768px) {
-    .normative-grid {
-        gap: 15px;
+    /* --- 1. Timeline Vertical a la Izquierda --- */
+    .timeline::before {
+        display: none; /* Eliminar línea vertical en móvil */
+    }
+    
+    /* Reset total para items pares e impares */
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 15px 0;
+        text-align: left;
+        left: 0 !important;
+        right: auto !important;
+        transform: none !important;
     }
 
-    .normative-card {
-        padding: 20px;
+    /* Contenido de la tarjeta */
+    .timeline-content {
+        width: 100%;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra más suave */
+    }
+
+    /* Indicador de expansión (Flecha) */
+    .timeline-content::after {
+        content: '▼';
+        position: absolute;
+        top: 22px;
+        right: 18px;
+        color: var(--sena-orange);
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+    }
+
+    .timeline-item.expanded .timeline-content::after {
+        transform: rotate(180deg);
+    }
+
+    /* Header siempre visible */
+    .norm-header {
+        margin-bottom: 0; /* Pegado si está colapsado */
+        padding-right: 25px; /* Espacio para la flecha */
+    }
+
+    .timeline-item.expanded .norm-header {
+        margin-bottom: 10px;
+    }
+
+    /* Ocultar detalles por defecto (Colapsado) */
+    .norm-summary,
+    .timeline-content p,
+    .btn-norm {
+        display: none;
+    }
+
+    /* Mostrar detalles al expandir */
+    .timeline-item.expanded .norm-summary,
+    .timeline-item.expanded .timeline-content p,
+    .timeline-item.expanded .btn-norm {
+        display: block;
+        animation: fadeInDetails 0.3s forwards;
+    }
+
+    .timeline-item.expanded .norm-summary {
+        margin-bottom: 10px;
+        color: var(--sena-blue);
+    }
+    
+    .timeline-content p {
+        text-align: justify; 
+        margin-bottom: 15px;
+        color: #555;
+        font-size: 0.95rem;
+    }
+
+    @keyframes fadeInDetails {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Eliminar puntos flotantes */
+    .timeline-dot {
+        display: none;
+    }
+
+    /* --- 2. Optimización Tips y Contenedores (Mobile First - Texto Envolvente) --- */
+    .tip-box {
+        display: block; /* Bloque para permitir float */
+        padding: 15px;
+        margin: 20px 0;
+        overflow: hidden; /* Clearfix seguro */
+        gap: 0; /* Resetear gap de flex */
+    }
+    
+    .tip-icon {
+        float: left;
+        font-size: 1.8rem;
+        margin-right: 12px;
+        margin-bottom: 0; /* Ajustado para que el texto fluya pegado */
+        line-height: 1;
+        min-width: auto;
+        height: auto;
+        padding-top: 2px; /* Ajuste visual alineación con título */
+    }
+
+    .tip-content {
+        display: block;
+    }
+
+    .tip-title {
+        font-size: 1rem;
+        margin-bottom: 8px; /* Más espacio antes del texto */
+        display: block;
+        min-height: 32px; /* Altura mínima para cubrir el icono */
+        padding-top: 2px; /* Alineación fina */
+    }
+
+    /* Tarjetas de Procesos y Estadísticas */
+    .process-card, 
+    .stat-card {
+        padding: 20px 15px;
+    }
+
+    .process-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    /* --- 3. Header Compacto --- */
+    header {
+        padding: 2.5rem 1rem 3.5rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    header h2 {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* --- 4. Contenido y Layout --- */
+    .content-area {
+        padding: 20px 15px;
+        margin-top: 20px;
+        border-radius: 16px;
+    }
+    
+    .nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: -50px;
+    }
+    
+    .nav-card {
+        padding: 12px 8px;
+        min-height: 100px;
+    }
+    
+    .nav-icon {
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+    }
+    
+    .nav-title {
+        font-size: 0.85rem;
+    }
+
+    /* --- 5. Tablas vs Tarjetas --- */
+    .chart-table {
+        display: none;
+    }
+    .time-dist-cards {
+        display: flex;
+    }
+
+    /* --- 6. Grid Unificado --- */
+    .normative-grid, 
+    .format-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .normative-card,
+    .format-card {
+        padding: 18px;
+        width: 100%;
+    }
+    
+    .format-card {
+        min-height: auto;
     }
 }
 

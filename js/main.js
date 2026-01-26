@@ -197,3 +197,23 @@ function toggleCard(card) {
     
     card.classList.toggle('active');
 }
+
+// Mobile Timeline Accordion
+document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    timelineItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Check if we are in mobile view
+            if (window.innerWidth <= 768) {
+                // Toggle expanded class
+                this.classList.toggle('expanded');
+                
+                // Optional: Close others (Accordion effect)
+                // timelineItems.forEach(other => {
+                //     if (other !== item) other.classList.remove('expanded');
+                // });
+            }
+        });
+    });
+});
