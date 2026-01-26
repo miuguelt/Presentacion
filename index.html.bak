@@ -1574,22 +1574,6 @@
                         </div>
                     </div>
 
-                    <!-- GOR-F-071 -->
-                    <div class="process-card-new" style="border-top: 4px solid var(--sena-orange);">
-                        <div>
-                            <h4 style="margin-top: 0; color: #2c3e50; font-size: 1.2rem;">GOR-F-071</h4>
-                            <p style="margin-bottom: 0; color: #666; font-size: 0.95rem;">Plan de Mejoramiento</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="card-badge-new"
-                                style="background: #fff3e0; color: #e65100; border: 1px solid #ffcc80;">Mejoramiento</span>
-                            <a href="formatos/GOR-F-071_Formato_planes_de_mejoramientoV02.xlsx" class="btn-download"
-                                download>
-                                ⬇ Descargar
-                            </a>
-                        </div>
-                    </div>
-
                     <!-- GOR-F-084 -->
                     <div class="process-card-new" style="border-top: 4px solid #607d8b;">
                         <div>
@@ -2265,21 +2249,6 @@
                         </div>
                     </div>
 
-                    <!-- GOR-F-071 -->
-                    <div class="process-card-new" style="border-top: 4px solid var(--sena-orange);">
-                        <div>
-                            <h4 style="margin-top: 0; color: #2c3e50; font-size: 1.2rem;">GOR-F-071</h4>
-                            <p style="margin-bottom: 0; color: #666; font-size: 0.95rem;">Plan de Mejoramiento</p>
-                        </div>
-                        <div class="card-footer">
-                            <span class="card-badge-new"
-                                style="background: #fff3e0; color: #e65100; border: 1px solid #ffcc80;">Mejoramiento</span>
-                            <a href="formatos/GOR-F-071_Formato_planes_de_mejoramientoV02.xlsx" class="btn-download"
-                                download>
-                                ⬇ Descargar
-                            </a>
-                        </div>
-                    </div>
 
                     <!-- GOR-F-084 -->
                     <div class="process-card-new" style="border-top: 4px solid #607d8b;">

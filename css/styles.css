@@ -663,79 +663,137 @@ footer::before {
 /* =========================================
    RESPONSIVE DESIGN
    ========================================= */
+/* =========================================
+   NORMATIVE GRID - Premium Interactive Cards
+   ========================================= */
+.normative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.normative-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+    border-top: 5px solid var(--sena-blue);
+}
+
+.normative-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 50, 77, 0.1);
+    border-top-color: var(--sena-green);
+}
+
+.norm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.norm-year {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--sena-orange);
+    background: #fff3e0;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.norm-title {
+    font-size: 1.2rem;
+    color: var(--sena-blue);
+    font-weight: 800;
+    margin: 0;
+}
+
+.norm-summary {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    line-height: 1.4;
+    transition: color 0.3s;
+}
+
+.normative-card:hover .norm-summary {
+    color: var(--sena-blue);
+}
+
+.norm-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+}
+
+.normative-card.active .norm-details {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #edf2f7;
+}
+
+.normative-card p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-norm {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--sena-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-norm:hover {
+    background: var(--sena-green);
+    transform: scale(1.05);
+}
+
+/* Specific item colors (optional) */
+.normative-card:nth-child(4n+1) {
+    border-top-color: var(--sena-blue);
+}
+
+.normative-card:nth-child(4n+2) {
+    border-top-color: var(--sena-green);
+}
+
+.normative-card:nth-child(4n+3) {
+    border-top-color: var(--sena-orange);
+}
+
+.normative-card:nth-child(4n+4) {
+    border-top-color: #9c27b0;
+}
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    .nav-grid {
-        margin-top: -40px;
+    .normative-grid {
         gap: 15px;
     }
 
-    .content-area {
-        padding: 30px;
-    }
-
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 0;
-        text-align: left;
-    }
-
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot {
-        left: 8px;
-        right: auto;
-    }
-
-    /* Mobile Improvements for Tables and Jornada Section */
-    .chart-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .chart-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .chart-table th,
-    .chart-table td {
-        padding: 10px 8px;
-        font-size: 0.85rem;
-    }
-
-    .stat-value {
-        font-size: 2rem;
-    }
-
-    /* Toggle Table vs Cards */
-    .chart-table {
-        display: none;
-    }
-
-    .time-dist-cards {
-        display: flex;
-    }
-
-    /* Process Card Mobile Fix */
-    .process-grid {
-        gap: 15px;
-    }
-
-    .process-card {
+    .normative-card {
         padding: 20px;
     }
 }

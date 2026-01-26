@@ -188,3 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+// Normative Cards Toggle
+function toggleCard(card) {
+    // Close other cards (optional, for accordion effect)
+    document.querySelectorAll('.normative-card').forEach(c => {
+        if (c !== card) c.classList.remove('active');
+    });
+    
+    card.classList.toggle('active');
+}
