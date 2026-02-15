@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-analisis-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#grad-analisis-main)" />
+  <!-- Magnifying Glass -->
+  <circle cx="28" cy="28" r="14" fill="none" stroke="white" stroke-width="3" />
+  <line x1="38" y1="38" x2="48" y2="48" stroke="white" stroke-width="6" stroke-linecap="round" />
+  <!-- Inner Graph -->
+  <path d="M22 34 L26 26 L30 30 L34 22" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>

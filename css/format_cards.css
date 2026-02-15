@@ -1,139 +1,142 @@
 /* =========================================
-   FORMAT CARDS - Premium Redesign
+   FORMAT CARDS — VIBRANT GLASS v6.0
+   Brand Aligned Edition
    ========================================= */
 
 .format-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 24px;
+    margin-top: 28px;
 }
 
 .format-card {
-    background: #ffffff;
-    border-radius: var(--radius-md);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: 20px;
     padding: 0;
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    /* Subtle border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: all 0.4s var(--ease-smooth);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 220px;
+    min-height: 240px;
 }
 
 .format-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.0);
-    /* Border disappears into shadow */
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(255, 255, 255, 0.05);
+    border-color: var(--glass-border-hover);
 }
 
-/* Color Accents (Top Border) */
+/* Vibrant Accent Borders */
 .format-card.accent-green {
-    border-top: 5px solid var(--sena-green);
+    border-top: 4px solid var(--neon-green);
 }
 
 .format-card.accent-blue {
-    border-top: 5px solid var(--sena-blue);
+    border-top: 4px solid var(--neon-blue);
 }
 
-.format-card.accent-orange {
-    border-top: 5px solid var(--sena-orange);
+.format-card.accent-orange,
+.format-card.accent-amber {
+    border-top: 4px solid var(--neon-orange);
 }
 
 .format-card.accent-purple {
-    border-top: 5px solid #9c27b0;
+    border-top: 4px solid var(--neon-purple);
 }
 
 .format-card.accent-gray {
-    border-top: 5px solid #607d8b;
+    border-top: 4px solid var(--neon-cyan);
 }
 
-
 .format-header {
-    padding: 25px 25px 10px;
+    padding: 24px 24px 12px;
 }
 
 .format-code {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--sena-deep-blue);
-    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
     display: block;
     letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .format-name {
     font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.4;
+    color: var(--text-secondary);
+    line-height: 1.5;
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
-/* Badge Styling */
+/* Badge Styling — Vibrant Glass */
 .format-badge {
     display: inline-block;
-    padding: 4px 10px;
-    border-radius: 6px;
+    padding: 6px 14px;
+    border-radius: 10px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .badge-mandatory {
-    background: #fff3e0;
-    color: #f57c00;
-    border: 1px solid #ffe0b2;
+    background: rgba(255, 107, 0, 0.15);
+    color: var(--neon-orange);
+    border: 1px solid rgba(255, 107, 0, 0.25);
 }
 
 .badge-reference {
-    background: #f5f5f5;
-    color: #616161;
-    border: 1px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .badge-procedure {
-    background: #e3f2fd;
-    color: #1565c0;
-    border: 1px solid #bbdefb;
+    background: rgba(0, 229, 255, 0.15);
+    color: var(--neon-blue);
+    border: 1px solid rgba(0, 229, 255, 0.25);
 }
 
 .badge-evaluation {
-    background: #f3e5f5;
-    color: #7b1fa2;
-    border: 1px solid #e1bee7;
+    background: rgba(188, 71, 254, 0.15);
+    color: var(--neon-purple);
+    border: 1px solid rgba(188, 71, 254, 0.25);
 }
 
 .badge-admin {
-    background: #eceff1;
-    color: #455a64;
-    border: 1px solid #cfd8dc;
+    background: rgba(0, 229, 255, 0.15);
+    color: var(--neon-cyan);
+    border: 1px solid rgba(0, 229, 255, 0.25);
 }
 
-
 .format-footer {
-    padding: 20px 25px;
-    background: linear-gradient(to top, #fcfcfc, #ffffff);
-    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* Align buttons to right */
-    gap: 10px;
+    gap: 12px;
 }
 
-/* Premium Download Button */
+/* Premium Download Button — Vibrant Brand */
 .btn-download-premium {
-    background: var(--sena-deep-blue);
+    background: linear-gradient(135deg, var(--sena-blue) 0%, var(--neon-blue) 100%);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.9rem;
@@ -141,34 +144,65 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 50, 77, 0.25);
+    gap: 10px;
+    transition: transform 0.4s var(--ease-out-back), 
+                box-shadow 0.4s var(--ease-smooth), 
+                filter 0.4s var(--ease-smooth);
+    font-family: inherit;
+    box-shadow: 0 8px 20px rgba(0, 75, 115, 0.3);
 }
 
 .btn-download-premium:hover {
-    background: var(--sena-blue);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 50, 77, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 75, 115, 0.5);
+    filter: brightness(1.1);
 }
 
 .btn-preview-premium {
-    background: transparent;
-    color: var(--text-muted);
-    border: 1px solid #e0e0e0;
-    padding: 9px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+    padding: 11px 20px;
     border-radius: 50px;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    transition: all 0.3s ease;
+    gap: 8px;
+    transition: transform 0.4s var(--ease-out-back), 
+                background 0.4s var(--ease-smooth), 
+                border-color 0.4s var(--ease-smooth),
+                color 0.4s var(--ease-smooth);
+    font-family: inherit;
 }
 
 .btn-preview-premium:hover {
-    background: #f8f9fa;
-    border-color: #ccc;
-    color: var(--text-main);
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
+}
+
+/* Shine Effect */
+.format-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.75s;
+    z-index: 1;
+}
+
+.format-card:hover::before {
+    left: 125%;
 }
